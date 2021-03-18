@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <form action="main.html" method="POST">
+    <fieldset align="center" style="font-size:25px">
+        <legend>What do you read today?</legend>
+        <input name="news_title" required>
+        <input type="submit" value="Classify!">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %}
+    <p style="font-size:25px">
+        The news is {{ result }}% a sport news!
+    </p>
+    {% endif %}
+</div>
+</body>
+</html>
