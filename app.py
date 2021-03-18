@@ -25,8 +25,8 @@ def main():
     if request.method == 'GET':
         return render_template('main.html')
     elif request.method == 'POST':
-        result = predict()
-        return render_template('main.html', result=result)
+        predictions = predict()
+        return render_template('main.html', predictions=predictions)
 
 if __name__ == '__main__':
     app.run(debug=True)

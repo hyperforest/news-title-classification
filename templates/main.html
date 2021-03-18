@@ -9,14 +9,15 @@
     <fieldset align="center" style="font-size:25px">
         <legend>What do you read today?</legend>
         <input name="news_title" required>
+        <br>
         <input type="submit" value="Classify!">
     </fieldset>
 </form>
 <br>
-<div class="result" align="center">
-    {% if result %}
+<div class="row" align="center">
+    {% if predictions %}
     <p style="font-size:25px">
-        The news is {{ result }}% a sport news!
+        The news is %{{ predictions['result'] }}% a sport news!
     </p>
     {% endif %}
 </div>
