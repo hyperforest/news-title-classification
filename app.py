@@ -41,7 +41,7 @@ def main():
         return render_template('main.html')
     elif request.method == 'POST':
         predictions = predict()
-        return render_template('main.html', predictions=predictions)
+        return predictions
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
